@@ -71,7 +71,7 @@ public class C03Operator {
         System.out.println(n4);
         int n5 = n1 ^ n2 ;
         System.out.println(n5);
-        int n6 = ~ n5 ;
+        int n6 = ~-400 ;
         System.out.println(n6);
 
         //
