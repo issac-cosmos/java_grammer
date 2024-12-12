@@ -24,25 +24,25 @@ public class C08List {
 //            intList.add(i);
 //        }
 
-////        add메서드
-//        List<Integer> myList = new ArrayList<>();
-//        myList.add(10);
-//        myList.add(20);
-//        System.out.println(myList);
-//        myList.add(0, 30);
-//        System.out.println(myList);
-//        List<Integer> myList2 = new ArrayList<>();
-//        myList2.addAll(myList);
-//
-////        get
-//        System.out.println(myList.get(0));
-//
-////        size() : 리스크의 개수 반환
-//        System.out.println(myList.size());
-////        for문을 이용해 myList 값하나씩 모두출력
-//        for(int i =0 ; i<myList.size() ; i++){
-//            System.out.println(myList.get(0));
-//        }
+//        add메서드
+        List<Integer> myList = new ArrayList<>();
+        myList.add(10);
+        myList.add(20);
+        System.out.println(myList);
+        myList.add(0, 30);
+        System.out.println(myList);
+        List<Integer> myList2 = new ArrayList<>();
+        myList2.addAll(myList);
+
+//        get
+        System.out.println(myList.get(0));
+
+//        size() : 리스크의 개수 반환
+        System.out.println(myList.size());
+//        for문을 이용해 myList 값하나씩 모두출력
+        for(int i =0 ; i<myList.size() ; i++){
+            System.out.println(myList.get(0));
+        }
 //        for(int a : myList){
 //            System.out.println(a);
 //        }
@@ -141,13 +141,13 @@ public class C08List {
 //        }
 
         //contains : 값이 있는지 여부를 리턴
-        List<Integer> myList = new ArrayList<>();
-        myList.add(10);
-        myList.add(20);
-        myList.add(30);
-        if(myList.contains(10)){
-            System.out.println("10이 있습니다.");
-        }
+//        List<Integer> myList = new ArrayList<>();
+//        myList.add(10);
+//        myList.add(20);
+//        myList.add(30);
+//        if(myList.contains(10)){
+//            System.out.println("10이 있습니다.");
+//        }
 
     }
 }

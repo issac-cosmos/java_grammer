@@ -1,12 +1,13 @@
 package C01Basic;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class C11QueStackDeque {
-    public static void main(String[] args) {
+    public static <string> void main(String[] args) {
 //        큐 인터페이스를 LinkedList가 구현한 방식을 가장 많이 사용
 //        Queue<Integer> queue = new LinkedList<>();
 //        queue.add(10);
@@ -98,11 +99,11 @@ public class C11QueStackDeque {
 
 //        최소힙 - 백준
 //        최대힙 인 경우
-        Queue<Integer> maxPq = new PriorityQueue<>(Comparator.reverseOrder());
-        maxPq.add(30);
-        maxPq.add(10);
-        maxPq.add(20);
-        System.out.println(maxPq.poll());
+//        Queue<Integer> maxPq = new PriorityQueue<>(Comparator.reverseOrder());
+//        maxPq.add(30);
+//        maxPq.add(10);
+//        maxPq.add(20);
+//        System.out.println(maxPq.poll());
 
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //        Queue<Integer> pq = new PriorityQueue<>();
@@ -125,6 +126,109 @@ public class C11QueStackDeque {
 //        sb.deleteCharAt(sb.length()-1);
 //        System.out.println(sb);
 
+//        프로그래머스 - 더 맵게
+//        class Solution {
+//            public int solution(int[] scoville, int K) throws IOException {
+//
+//                Queue<Integer> pq = new PriorityQueue<>();
+//                scoville = new int[]{1, 2, 3, 9, 10, 12};
+//                int answer = 0;
+//                K = 7;
+//                for(int s : scoville){
+//                    pq.offer(s);
+//                }
+//                while (!pq.isEmpty()){
+//                    int first = pq.poll();
+//                    if(first>K){
+//                        return answer;
+//                    }
+//                    int second = pq.poll();
+//                    int newscoville = first+(second*2);
+//                    pq.offer(newscoville);
+//                    answer++;
+//                }
+//
+//                return -1;
+//            }
+//        }
 
+//        같은 숫자는 싫어
+//        public class Solution {
+//            public int[] solution(int []arr) {
+//                int[] answer = {};
+//                Queue<Integer> queue = new LinkedList<>();
+//                queue.add(arr[0]);
+//                for(int i = 0; i < arr.length-1 ; i++){
+//                    if(arr[i]!=arr[i+1]){
+//                        queue.add(arr[i+1]);
+//                    }
+//                }
+//
+//                return answer;
+//            }
+//        }
+
+//        스택으로 풀기
+//        int []arr = {1,1,3,3,0,1,1};
+//        Stack<Integer> st = new Stack<>();
+//        for(int a : arr){
+//            if(st.isEmpty()){
+//                st.push(a);
+//            }else {
+//                if(st.peek() != a){
+//                    st.push(a);
+//                }
+//            }
+//        }
+//        int[] answer = new int[st.size()];
+//        for(int i=answer.length-1; i>=0 ;i--){
+//            answer[i] = st.pop();
+//        }
+//        System.out.println(Arrays.toString(answer));
+
+//        Deque : addFirst , addLast , pollFirst , pollLast
+//        Deque<Integer> d1 = new ArrayDeque<>();
+//        d1.addLast(10);
+//        d1.addLast(20);
+//        System.out.println(d1);
+//        d1.addFirst(30);
+//        System.out.println(d1);
+//        System.out.println(d1.peekFirst());//30
+//        System.out.println(d1.peekLast());//20
+//        System.out.println(d1.pollLast());//20
+//        System.out.println(d1.pollFirst());//30
+
+//        올바른 괄호
+
+//                String s="(())()";
+//                boolean answer = true;
+//                Deque<Character> d1 = new ArrayDeque<>();
+//                int sum = 0;
+//                if(s.charAt(0)=='(') {
+//                    for(int i = 0; i < s.length(); i++) {
+//                        char ch = s.charAt(i);
+//                        d1.addLast(s.charAt(i));
+//                        if(s.charAt(i)==')'){
+//                            d1.pollFirst();
+//                            d1.pollLast();
+//                        }
+//                    }
+//                }
+//        System.out.println(d1);
+//                if(d1.isEmpty()){
+//                    System.out.println(true);
+//                } else {
+//                    System.out.println(false);
+//                }
+////        이런 방법도있다.
+//        char[] arr = s.toCharArray();
+//        int cnt = 0;
+//
+//        for (char c: arr){
+//            cnt = c=='(' ? cnt+1 : cnt-1;
+//            if (cnt < 0) return false;
+//        }
+//
+//        return cnt==0;
     }
 }

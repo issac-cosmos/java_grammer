@@ -214,19 +214,19 @@ public class C05LoopStatements {
 //        }
 
 
-//        int[][] arr = {{1,2,3},{4,5,11},{7,8,9},{10,11,12}};
-////        숫자 8을 찾아서 2,1에 있다고 출력
-////        숫자 11일 찾되, 가장 먼저 찾아지는 11에 위치만 출력
-//        loop1:
-//        for (int i =0;i < 4; i++){
-//            loop2:
-//            for (int j = 0; j < 3; j++){
-//                if (arr[i][j] == 11){
-//                    System.out.println(i + "," + j);
-//                    break loop1;
-//                }
-//            }
-//        }
+        int[][] arr = {{1,2,3},{4,5,11},{7,8,9},{10,11,12}};
+//        숫자 8을 찾아서 2,1에 있다고 출력
+//        숫자 11일 찾되, 가장 먼저 찾아지는 11에 위치만 출력
+        loop1:
+        for (int i =0;i < 4; i++){
+            loop2:
+            for (int j = 0; j < 3; j++){
+                if (arr[i][j] == 11){
+                    System.out.println(i + "," + j);
+                    break loop1;
+                }
+            }
+        }
 //100~200까지 수 중에서 가장 작은 소수 출력
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();

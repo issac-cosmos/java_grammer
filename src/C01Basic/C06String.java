@@ -39,8 +39,8 @@ public class C06String {
 //
 //        String st1 = new String("hello1");
 //        String st2 = "hello1"; //리터럴방식 허용 : 권장되는 방식
-//        문자 pool을 통해 성능향상
-
+////        문자 pool을 통해 성능향상
+//
 ////        성능최적화
 //        System.out.println(st1==st2);
 //
@@ -91,7 +91,7 @@ public class C06String {
 //            }
 //        }
 //        System.out.println(count);
-
+//
 //            int c = 0;
 ////        toCharArray() : String 문자열을 char배열로 리턴
 //         char[] chArr = st2.toCharArray();
@@ -109,7 +109,7 @@ public class C06String {
 //        System.out.println(st1.indexOf("java"));
 //
 //
-////contains : 특정 문자열이 있는지 여부 boolean
+////    contains : 특정 문자열이 있는지 여부 boolean
 //        System.out.println(st1.contains("hello"));
 //        System.out.println(st1.contains("world"));
 
@@ -189,7 +189,7 @@ public class C06String {
 
         //문자열 다루기 기본 - 프로그래머스
 
-        //split : 특정문자를 기준으로 문자열을 자르는것.
+//        split : 특정문자를 기준으로 문자열을 자르는것.
 //        String a = "a:b:c:d";
 //        String[] arr1 = a.split(":");
 //        System.out.println(Arrays.toString(arr1));
@@ -201,7 +201,7 @@ public class C06String {
 //
 //        int count = 0 ;
 //        for(int i = 0 ; i<arr2.length; i++){
-//            if(arr2[i]!=""){
+//            if(!arr2[i].equals("") && !arr2[i].equals(null)){
 //                count++;
 //            }
 //        }
@@ -227,14 +227,14 @@ public class C06String {
 
 //        StringBuffer : 문자열 조립
 //        String[] arr = {"java", "python", "javacript"};
-//        String answer = "";
-//        for(String a : arr){
-//            answer += a;
-//        }
-//        System.out.println(answer);
-//
-//        String answer2 = String.join(":",arr);
-//        System.out.println(answer2);
+////        String answer = "";
+////        for(String a : arr){
+////            answer += a;
+////        }
+////        System.out.println(answer);
+////
+////        String answer2 = String.join(":",arr);
+////        System.out.println(answer2);
 
 //        StringBuffer : 문자열 조립
 //        StringBuffer sb = new StringBuffer();
