@@ -20,6 +20,7 @@ class MemberInnerClass{
         int b = 10;
         void display(){
             System.out.println("b의 값은"+this.b);
+
         }
     }
 

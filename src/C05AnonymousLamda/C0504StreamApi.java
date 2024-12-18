@@ -1,9 +1,6 @@
 package C05AnonymousLamda;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -73,14 +70,123 @@ public class C0504StreamApi {
 //        String[] newStArr = Arrays.stream(stArr).sorted(Comparator.reverseOrder()).toArray(a->new String[a]);
 //        System.out.println(Arrays.toString(newStArr));
 
-        int[] arr1 = {1,2,3,4,5,6};
-//        arr1에서 홀수만 담은 배열을 arr2라는 이름으로 변환
-//        arr3에 홀수걸러서 해당 홀수의 제곱값을 담기
-//        arr4에 솔수만 거르고, 제곱값을 구하고 해당 숫자들을 오름차순한 순서로 담아주세요.
-        int[] arr2 = Arrays.stream(arr1).filter(a->a%2!=0).toArray();
-        System.out.println(Arrays.toString(arr2));
-        int[] arr3 = Arrays.stream(arr2).map(a->a*a).toArray();
-        System.out.println(Arrays.toString(arr3));
-        int[] arr4 = Arrays.stream(arr3).sorted().toArray();
+//        int[] arr1 = {1,2,3,4,5,6};
+////        arr1에서 홀수만 담은 배열을 arr2라는 이름으로 변환
+////        arr3에 홀수걸러서 해당 홀수의 제곱값을 담기
+////        arr4에 솔수만 거르고, 제곱값을 구하고 해당 숫자들을 오름차순한 순서로 담아주세요.
+//        int[] arr2 = Arrays.stream(arr1).filter(a->a%2!=0).toArray();
+//        System.out.println(Arrays.toString(arr2));
+//        int[] arr3 = Arrays.stream(arr2).map(a->a*a).toArray();
+//        System.out.println(Arrays.toString(arr3));
+//        int[] arr4 = Arrays.stream(arr3).sorted().toArray();
+
+//        스트림의 소모  : foreach(출력) , Sum(합계) , reduce(누적연산)
+//        int[] intArr = {10,20,30,40};
+//        Arrays.stream(intArr).forEach(a-> System.out.println(a));
+//        int total = Arrays.stream(intArr).sum();
+//        System.out.println(total);
+//        int max = Arrays.stream(intArr).max().getAsInt();
+////        optional객체 : 값이 있을수도 있고 , 없을수도 있음을 명시한 객체
+//        int min = Arrays.stream(intArr).min().getAsInt();
+//        long count = Arrays.stream(intArr).count();
+//
+//        //        reduce : 누적연산 , reduce(초기값,연산식)
+//        int allAdd = Arrays.stream(intArr).reduce(0,(a,b)->a+b);
+//        System.out.println(allAdd);
+//        int allMultiply = Arrays.stream(intArr).reduce(1,(a,b)->a*b);
+//        System.out.println(allMultiply);
+//
+//        String[] stArr = {"hello", "java","world"};
+//        String myString = Arrays.stream(stArr).reduce("",(a,b)->a+b);
+//        System.out.println(myString);
+////        findFirst : 첫번째요소  반환
+//        String first = Arrays.stream(stArr).filter(a->a.length()>=5).findFirst().get();
+//        System.out.println(first);
+
+
+
+//        List<Student> students = new ArrayList<>();
+////        객체 담기 : {"Kim",20}, {"Choi",32}, {"Lee", 35} , {"Park",22}
+//        students.add(new Student("Kim",20));
+//        students.add(new Student("Choi",32));
+//        students.add(new Student("Lee",35));
+//        students.add(new Student("Park",22));
+//
+//
+////        1)모든 객체의 평균 나이
+//        double age = students.stream().mapToInt(a->a.getAge()).average().getAsDouble();
+//        System.out.println(age);
+////        2)가장 나이 어린 사람 찾기
+//        Student s1 = students.stream().sorted((o1,o2)->o1.getAge()-o2.getAge()).findFirst().get();
+////        3)30대인 사람들의 이름을 새로운 Sting배열에 담기
+//        String[] newArr = students.stream().filter(a->a.getAge()>=30).map(a->a.getName()).toArray(a->new String[a]);
+//        System.out.println(Arrays.toString(newArr));
+////        메소드 참조 : 하나의 메소드만을 호출하는 경우에 매개변수를 제거한 형식, 클래스명::메서드명
+//        students.stream().forEach(System.out::println);
+//        String[] arr = students.stream().map(a->a.getName()).toArray(String[]::new);
+
+
+////        Optional객체 : 특정객체에 값이 없을지도 모른다는것을 명시적으로 표현
+//        Optional<String> opt1 = Optional.ofNullable(null);
+//        String st1 = null;
+//        if(st1!=null){
+//            System.out.println(st1.compareTo("hello"));
+//        }else{
+//            System.out.println("값이 없습니다");
+//        }//null 처리 해주는게 좋은 코딩
+//        if(opt1.isPresent()){
+//            System.out.println(opt1.get().compareTo("hello"));
+//        }else{
+//            System.out.println("값이 없습니다");
+//        }
+
+//        System.out.println(st1.compareTo("hello"));//null 과 비교 불가 (에러 발생)
+
+////      Optional객체 생성방법 3가지
+//        Optional<String> opt1 = Optional.empty();//이어있는 Optional객체 생성
+//        Optional<String> opt2 = Optional.ofNullable(null);//비어있는 Optional객체 생성
+//        Optional<String> opt2_1 = Optional.ofNullable("hello");//값이 있는 Optional객체 생성
+//        Optional<String> opt3 = Optional.of("hello");//값이 있는 경우만 Optional.of
+//
+////        (중요)Optional 객체 처리 방법 4가지
+////        방법1. isPresent()확인후에 get()
+//        if(opt2.isPresent()){
+//            System.out.println(opt2.get());
+//        }else{
+//            System.out.println("값이 없습니다.");
+//        }
+////        방법2. orElse() : 값이 있으면 있는값 return, 없으면 지정값 return
+//        System.out.println(opt2.orElse("none"));
+////        방법3. orElseGet() : 값이 있으면 있는값 return , 없으면 람다함수 실행
+////        방법4. orElseThrow : 값이 있으면 있는값 return , 없으면 지정된 예외 강제 발생
+////        개발에서 사용자에게 적절한 메시지 전달 목적과 의도된 코드중단을 목표로 , 강제로 예외를 발생시키는 경우가 많음.
+//        System.out.println(opt2.orElseThrow(()->new NoSuchElementException("값이 없습니다.")));
+
+//        예시1.
+        List<Student> students = new ArrayList<>();
+//        OptionalDouble opt_avg = students.stream().mapToInt(a->a.getAge()).average();
+//        if(opt_avg.isPresent()){
+//            System.out.println(opt_avg.getAsDouble());
+//        }else{
+//            throw new NoSuchElementException("값이 없음");
+//        }
+        //위에 4줄을 줄이면
+        System.out.println(students.stream().mapToInt(a->a.getAge()).average().orElseThrow(()->new NoSuchElementException("값이 없음")));
+
+//        예시2. DB조회 상황 가능
+        System.out.println("조회하실 id를 입력해주세요.");
+        Scanner sc = new Scanner(System.in);
+
+        int id = Integer.parseInt(sc.nextLine());
+        Optional<Student> myStudent;
+        if(id<10){
+            myStudent = Optional.of(new Student("hong",20));
+        }else{
+            myStudent = Optional.empty();
+        }
+//        Student가 있으면 student 출력. 없으면 " 해당학생은 없습니다." 라고 에러메시지와 함께 에러 강제 발생
+        System.out.println(myStudent.orElseThrow(()->new NoSuchElementException("해당 학생은 없습니다.")));
+
+
     }
 }

@@ -9,7 +9,6 @@ public class C0502AnonymousClass {
         AbstractAnimal a1 = new AbstractAnimal() {
             @Override
             void makeSound1() {
-
             }
         };
 

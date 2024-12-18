@@ -25,6 +25,8 @@ class Solution {
         for(String a : arr){
             answer+=a;
         }
-        System.out.println(answer);
+        if(answer.charAt(0)=='0'){
+            answer = "0";
+        }
     }
 }

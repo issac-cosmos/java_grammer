@@ -23,15 +23,12 @@ public class AbsHip {
             if(k==0&&pq.isEmpty()) {
                 System.out.println(0);
                 continue;
-            }
-
-            if(k!=0){
-                pq.add(k);
+            }else if(k==0){
+                System.out.println(pq.peek());
+                pq.poll();
             }else {
-                System.out.println();
-
+                pq.add(k);
             }
-
         }
 
 
