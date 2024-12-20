@@ -1,4 +1,4 @@
-package C07ExceptionFileParhing;
+package C07ExceptionFileParsing;
 
 import java.io.IOException;
 import java.nio.file.Files;

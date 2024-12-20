@@ -1,4 +1,4 @@
-package C07ExceptionFileParhing;
+package C07ExceptionFileParsing;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

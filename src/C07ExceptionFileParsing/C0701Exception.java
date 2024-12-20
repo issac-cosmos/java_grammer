@@ -1,7 +1,6 @@
-package C07ExceptionFileParhing;
+package C07ExceptionFileParsing;
 
 import java.sql.SQLException;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class C0701Exception {

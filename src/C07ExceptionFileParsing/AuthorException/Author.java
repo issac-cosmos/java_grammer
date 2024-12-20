@@ -1,4 +1,4 @@
-package C07ExceptionFileParhing.AuthorException;
+package C07ExceptionFileParsing.AuthorException;
 
 //엔티티계층
 public class Author {
